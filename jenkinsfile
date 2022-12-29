@@ -13,5 +13,11 @@ pipeline {
                 git branch: 'main', credentialsId: '663f2944-7e26-4e0c-8349-07e2b8338417', url: 'https://github.com/davidaltair/testing.git'
             }
         }
+        stage('Informacion del sistema') {
+            steps {
+                java --version
+                mvn --version
+            }
+        }
     }
 }
