@@ -15,8 +15,16 @@ pipeline {
         }
         stage('Informacion del sistema') {
             steps {
-                java --version
-                mvn --version
+                echo 'version de java'
+                sh "java --version"
+                echo 'version de maven'
+                sh "mvn --version"
+            }
+        }
+        stage('Clonado del proyecto de ejemplo') {
+            steps {
+                echo 'Clonado del proyecto de ejemplo'
+                git 'https://github.com/jenkins-docs/simple-java-maven-app.git'
             }
         }
     }
