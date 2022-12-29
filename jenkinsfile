@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Archivo de GitHub'
+                echo 'Archivo de jenkinsfile de GitHub'
             }
         }
         stage('Clonado del proyecto') {
