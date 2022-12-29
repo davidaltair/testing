@@ -25,6 +25,7 @@ pipeline {
             steps {
                 echo 'Clonado del proyecto de ejemplo'
                 git 'https://github.com/jenkins-docs/simple-java-maven-app.git'
+                echo 'Prueba de subida de codigo desde IntelliJ'
             }
         }
     }
