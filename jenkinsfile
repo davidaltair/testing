@@ -10,7 +10,7 @@ pipeline {
         stage('Clonado del proyecto') {
             steps {
                 echo 'Se clona el proyecto'
-                git credentialsId: '663f2944-7e26-4e0c-8349-07e2b8338417', url: 'https://github.com/davidaltair/testing.git'
+                git branch: 'main', credentialsId: '663f2944-7e26-4e0c-8349-07e2b8338417', url: 'https://github.com/davidaltair/testing.git'
             }
         }
     }
