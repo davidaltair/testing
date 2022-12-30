@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Clonado del proyecto de ejemplo') {
             steps {
-                echo 'Clonado del proyecto de ejemplo'
+                echo 'Clonado del proyecto de ejemplo, archivo groovy'
                 git 'https://github.com/jenkins-docs/simple-java-maven-app.git'
             }
         }
