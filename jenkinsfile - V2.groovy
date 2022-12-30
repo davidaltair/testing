@@ -29,5 +29,13 @@ pipeline {
                 sh ' git clone https://github.com/jenkins-docs/simple-java-maven-app.git /var/lib/jenkins/workspace/Proyecto_Ejemplo'
             }
         }
+        stage('Compilacion'){
+            steps{
+                echo 'Compilacion del proyecto de ejemplo - jar'
+                sh 'cd /var/lib/jenkins/workspace/Proyecto_Ejemplo'
+                sh 'mvn clean package'
+                sh 'ls -lha'
+            }
+        }
     }
 }
