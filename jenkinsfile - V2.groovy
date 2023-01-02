@@ -33,6 +33,7 @@ pipeline {
         stage('Compilacion'){
             steps{
                 echo 'Compilacion del proyecto de ejemplo - jar'
+                sh 'whoami'
                 sh 'pwd'
                 sh 'ls -lha'
             }
