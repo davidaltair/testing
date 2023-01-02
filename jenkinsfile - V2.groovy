@@ -29,7 +29,7 @@ pipeline {
                 echo 'Clonado del proyecto de ejemplo, archivo groovy'
                 //git 'https://github.com/jenkins-docs/simple-java-maven-app.git'
                 //sh ' git clone -b feature/app https://github.com/davidaltair/testing.git /var/lib/jenkins/workspace/Proyecto_Ejemplo'
-                //sh ' git clone -b feature/app https://github.com/davidaltair/testing.git '
+                sh ' git clone -b feature/app https://github.com/davidaltair/testing.git '
             }
         }
         stage('Compilacion'){
