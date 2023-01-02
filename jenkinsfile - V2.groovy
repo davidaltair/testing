@@ -36,6 +36,7 @@ pipeline {
             steps{
                 echo 'Compilacion del proyecto de ejemplo - jar'
                 //sh 'cd /var/lib/jenkins/workspace/Proyecto_Ejemplo'
+                sh 'pwd'
                 sh 'ls -lha'
                 //sh 'mvn clean package'
             }
