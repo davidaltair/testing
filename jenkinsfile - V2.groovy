@@ -28,17 +28,16 @@ pipeline {
                 sh 'rm -r /var/lib/jenkins/workspace/Proyecto_Ejemplo'
                 echo 'Clonado del proyecto de ejemplo, archivo groovy'
                 //git 'https://github.com/jenkins-docs/simple-java-maven-app.git'
-                sh ' git clone -b feature/app https://github.com/davidaltair/testing.git /var/lib/jenkins/workspace/Proyecto_Ejemplo'
-
+                //sh ' git clone -b feature/app https://github.com/davidaltair/testing.git /var/lib/jenkins/workspace/Proyecto_Ejemplo'
+                //sh ' git clone -b feature/app https://github.com/davidaltair/testing.git '
             }
         }
         stage('Compilacion'){
             steps{
                 echo 'Compilacion del proyecto de ejemplo - jar'
-                sh 'cd /var/lib/jenkins/workspace/Proyecto_Ejemplo'
+                //sh 'cd /var/lib/jenkins/workspace/Proyecto_Ejemplo'
                 sh 'ls -lha'
-                sh 'mvn clean package'
-                sh 'ls -lha'
+                //sh 'mvn clean package'
             }
         }
     }
