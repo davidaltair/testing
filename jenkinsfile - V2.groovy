@@ -10,7 +10,7 @@ pipeline {
                 sh "mvn --version"
             }
         }
-        stage('Clonado del proyecto de ejemplo') {
+        stage('Clonado del proyecto de ejemplo y compilacion') {
             steps {
                 echo 'Se clona el proyecto de github'
                 git branch: 'feature/app', credentialsId: '663f2944-7e26-4e0c-8349-07e2b8338417', url: 'https://github.com/davidaltair/testing.git'
