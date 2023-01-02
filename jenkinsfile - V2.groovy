@@ -36,6 +36,8 @@ pipeline {
                 sh 'whoami'
                 sh 'pwd'
                 sh 'ls -lha'
+                sh 'cd testing/'
+                sh 'pwd'
             }
         }
     }
