@@ -10,7 +10,7 @@ pipeline {
         stage('Clonado del jenkinsfile') {
             steps {
                 //sh 'rm -r /var/lib/jenkins/workspace/Proyecto_Jenkinsfile'
-                //echo 'Se clona el proyecto'
+                echo 'Se clona el proyecto'
                 //git branch: 'main', credentialsId: '663f2944-7e26-4e0c-8349-07e2b8338417', url: 'https://github.com/davidaltair/testing.git'
                 //sh ' git clone https://github.com/davidaltair/testing.git /var/lib/jenkins/workspace/Proyecto_Jenkinsfile'
             }
