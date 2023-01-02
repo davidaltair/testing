@@ -2,19 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
-            steps {
-                echo 'Archivo de jenkinsfile de GitHub'
-            }
-        }
-        stage('Clonado del jenkinsfile') {
-            steps {
-                //sh 'rm -r /var/lib/jenkins/workspace/Proyecto_Jenkinsfile'
-                echo 'Se clona el proyecto'
-                //git branch: 'main', credentialsId: '663f2944-7e26-4e0c-8349-07e2b8338417', url: 'https://github.com/davidaltair/testing.git'
-                //sh ' git clone https://github.com/davidaltair/testing.git /var/lib/jenkins/workspace/Proyecto_Jenkinsfile'
-            }
-        }
         stage('Informacion del sistema') {
             steps {
                 echo 'version de java'
@@ -25,21 +12,15 @@ pipeline {
         }
         stage('Clonado del proyecto de ejemplo') {
             steps {
-                sh 'rm -r /var/lib/jenkins/workspace/Test_Pipeline/testing'
-                echo 'Clonado del proyecto de ejemplo, archivo groovy'
-                //sh ' git clone -b feature/app https://github.com/davidaltair/testing.git '
+                echo 'Se clona el proyecto de github'
                 git branch: 'feature/app', credentialsId: '663f2944-7e26-4e0c-8349-07e2b8338417', url: 'https://github.com/davidaltair/testing.git'
                 sh ' mvn clean package'
             }
         }
-        stage('Compilacion'){
-            steps{
-                echo 'Compilacion del proyecto de ejemplo - jar'
-                sh 'whoami'
-                sh 'pwd'
-                sh 'ls -lha'
-                sh 'cd testing/'
-                sh 'pwd'
+        stage('Se copia a webapps de tomcat') {
+            steps {
+                echo 'Se copia el war al tomcat'
+                sh 'cp ./target/hello-world-maven.war /opt/tomcat/webapps'
             }
         }
     }
