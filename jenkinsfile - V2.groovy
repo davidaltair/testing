@@ -25,7 +25,7 @@ pipeline {
         }
         stage('Clonado del proyecto de ejemplo') {
             steps {
-                sh 'rm -r /var/lib/jenkins/workspace/Test Pipeline/testing'
+                sh 'rm -r /var/lib/jenkins/workspace/Test_Pipeline/testing'
                 echo 'Clonado del proyecto de ejemplo, archivo groovy'
                 //git 'https://github.com/jenkins-docs/simple-java-maven-app.git'
                 //sh ' git clone -b feature/app https://github.com/davidaltair/testing.git /var/lib/jenkins/workspace/Proyecto_Ejemplo'
