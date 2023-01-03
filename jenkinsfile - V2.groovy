@@ -20,7 +20,7 @@ pipeline {
         stage('Se copia a webapps de tomcat') {
             steps {
                 echo 'Se copia el war al tomcat'
-                sh 'cp ./target/hello-world-maven.war /opt/tomcat/webapps'
+                sh 'cp ./target/Hello_World.war /opt/tomcat/webapps'
             }
         }
     }
